@@ -1,17 +1,23 @@
-const MusicTools = {
+const musicTools = {
     midiPitchToFrequency: function (midiPitch) {
-       return freq = 440 * Math.pow(2, ((midiPitch - 69) / 12)) 
+       let freq = 440 * Math.pow(2, ((midiPitch - 69) / 12)) 
+        return freq
     } ,
     frequencyToMidiPitch: function (frequency) {
-        return midiPitch =  69 + 12 * Math.log2(frequency / 440);
+        
+        let midiPitch =  69 + 12 * Math.log2(frequency / 440);
+        return midiPitch
     } ,
     dbfsToLinearAmplitude: function (dbfs) {
-        return linear = Math.pow(10, dbfs / 20)
+        
+        let linear = Math.pow(10, dbfs / 20)
+        return linear
     }, 
     linearAmplitudeToDBFS: function (amp) {
-        dBFS = 20 * Math.log10(amp);
+        let dBFS = 20 * Math.log10(amp);
+        return dBFS
     } ,
 
-}
+};
 
-export default MusicTools;
+export {musicTools};
